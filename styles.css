@@ -20,32 +20,108 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
+    vertical-align: middle;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
     text-align: left;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 tr:hover {
     background-color: #f1f1f1;
 }
 
-.featured {
-    color: red;
+td img {
+    vertical-align: middle;
+    margin-right: 10px;
+    max-width: 50px;  /* Set a maximum width */
+    max-height: 50px;  /* Set a maximum height */
+}
+
+.college-name {
     font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
 }
 
-.button {
-    color: #fff;
-    background-color: #007bff;
+.college-location,
+.course-details,
+.cutoff {
+    color: #555;
+}
+
+.apply-button,
+.brochure-button,
+.compare-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    text-align: center;
     border: none;
-    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.apply-button {
+    color: #ff5722;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+.apply-button:before {
+    content: '→ ';
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.apply-button:hover {
+    text-decoration: underline;
+}
+
+.brochure-button {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+.brochure-button:hover {
+    background-color: #0097a7;
+}
+
+.compare-button {
+    background-color: #3f51b5;
+    color: #fff;
+}
+
+.compare-button:hover {
+    background-color: #303f9f;
+}
+
+.user-reviews {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.ranking,
+.package-details {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.media-icons img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
 }

@@ -6,36 +6,36 @@ document.addEventListener('DOMContentLoaded', () => {
             <tr>
                 <td>${college.rank}</td>
                 <td>
-                    <img src="${college.logo}" alt="Logo" style="width: 50px; height: 50px;">
-                    <strong>${college.name}</strong><br>
-                    ${college.location}<br>
-                    ${college.branch}<br>
-                    ${college.cutoff}<br>
-                    <button class="button">Apply Now</button>
-                    <button class="button">Download Brochure</button>
+                    <img src="${college.logo}" alt="Logo">
+                    <div class="college-name">${college.name}</div>
+                    <div class="college-location">${college.location}</div>
+                    <div class="course-details">${college.branch}</div>
+                    <div class="cutoff">${college.cutoff}</div>
+                    <button class="apply-button button">Apply Now</button>
+                    <button class="brochure-button button">Download Brochure</button>
                     <input type="checkbox"> Add to Compare
                 </td>
                 <td>
                     ₹${college.fees.toLocaleString()}<br>
                     ${college.course}<br>
-                    <button class="button">Compare Fees</button>
+                    <button class="compare-button button">Compare Fees</button>
                 </td>
                 <td>
                     ₹${college.avgPackage.toLocaleString()}<br>
                     Average Package<br>
                     ₹${college.highestPackage.toLocaleString()}<br>
                     Highest Package<br>
-                    <button class="button">Compare Placement</button>
+                    <button class="compare-button button">Compare Placement</button>
                 </td>
                 <td>
                     ${college.userRating} / 10<br>
                     Based on ${college.userReviews} User Reviews<br>
-                    <button class="button">${college.socialLife}</button>
+                    <button class="compare-button button">${college.socialLife}</button>
                 </td>
                 <td>
                     ${college.rankIndia}<br>
                     ${college.mediaYear}<br>
-                    ${college.mediaIcons.map(icon => `<img src="${icon}" alt="Media Icon" style="width: 20px; height: 20px;">`).join('')}
+                    <div class="media-icons">${college.mediaIcons.map(icon => `<img src="${icon}" alt="Media Icon">`).join('')}</div>
                 </td>
             </tr>
         `;
